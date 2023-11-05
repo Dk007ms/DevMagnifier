@@ -5,14 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Khoji</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="assets/detective (2).png" type="image/x-icon">
+    <link rel="stylesheet" href="search.css">
+    <link rel="shortcut icon" href="assets/khoji.png" type="image/x-icon">
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
-            
+            <div class="title">
+                <div class="title_name">
+                    <img src="assets/khoji.png" class="khoji-img" alt="khoji">
+                </div>
+
+                <span class="Khoji_text">Dev Detective</span>
+
+                <button class="mode">
+                    <img src="assets/dark-mode.png" class="khoji-img" alt="mode">
+                </button>
+            </div>
+
+            <div class="search_bar">
+                <div class="input_box">
+        
+                    <!-- Search Icon -->
+                    <!-- This is just for search icon. You can simply use image also -->
+                    <div class="search_container">
+                        <div class="circle"></div>
+                        <div class="line"></div>
+                    </div>
+                    <!-- Search Icon ends -->
+        
+                    <input type="text" class="input">
+        
+                    <!-- Placeholder -->
+        
+                    <div class="placeholder">
+                        <div class="box">
+                            <p>Search for</p>
+                        </div>
+                        <div class="slider_box">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+        
+                    <!-- Placeholder ends-->
+        
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="photo"></div>
+                <div class="text_details">
+                    <div class="detail1">
+                        <div class="name_joining">
+                            <h3 class="name"></h3>
+                            <h3 class="join_date"></h3>
+                        </div>
+                        <h3 class="username"></h3>
+                        <div class="description"></div>
+                    </div>
+                    <div class="github_repos">
+                        <div class="Repos"></div>
+                        <div class="Followers"></div>
+                        <div class="Following"></div>
+                    </div>
+                    <div class="links"></div>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="search.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
