@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
 }
 
 
@@ -13,12 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Oswald', sans-serif;
 }
 
-.active{
-    
-}
 
 .container{
     width:40rem;
@@ -41,13 +38,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.searchbar{
-    width:35rem;
-    height: 4rem;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 5px black;
-    border: none;
-}
+
 .details{
     width:35rem;
     height: 30rem;
@@ -61,8 +52,11 @@
 }
 
 .Khoji_text{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: rgb(50, 49, 8,0.8);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: #395f9c;
 }
 
 .title_name{
@@ -74,4 +68,19 @@
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.search_icon_btn{
+    width: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#search{
+    
+}
+
+.lightmode{
+    display: none;
 }
