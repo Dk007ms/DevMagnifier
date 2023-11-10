@@ -18,9 +18,11 @@
 
                 <span class="Khoji_text">DevDetective</span>
 
-                <button class="mode">
-                    <img src="assets/dark-mode.png" class="khoji-img darkmode" alt="mode">
-                    <img src="assets/light-mode.png" class="khoji-img lightmode" alt="mode">
+                <button class="mode dark_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="khoji-img darkmode" id="moon"><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.63 20a9 9 0 0 1-9.12-8.78A8.61 8.61 0 0 1 14.17 5 10.17 10.17 0 0 0 5 15a10.23 10.23 0 0 0 10.42 10A10.43 10.43 0 0 0 25 18.9a9.3 9.3 0 0 1-4.37 1.1Z"></path></svg>
+                </button>
+                <button class="mode light_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="khoji-img lightmode" id="sun"><circle cx="15" cy="15" r="6" ></circle><path d="M15 6a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1zm0 22a1 1 0 0 1-1-1v-2a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1zM5 16H3a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zm22 0h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zM6.51 24.49a1 1 0 0 1-.7-.3 1 1 0 0 1 0-1.41l1.41-1.42a1 1 0 0 1 1.42 1.42l-1.42 1.41a1 1 0 0 1-.71.3zM22.07 8.93a1 1 0 0 1-.71-.29 1 1 0 0 1 0-1.42l1.42-1.41a1 1 0 0 1 1.41 1.41l-1.41 1.42a1 1 0 0 1-.71.29zm1.42 15.56a1 1 0 0 1-.71-.3l-1.42-1.41a1 1 0 0 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41 1 1 0 0 1-.7.3zM7.93 8.93a1 1 0 0 1-.71-.29L5.81 7.22a1 1 0 0 1 1.41-1.41l1.42 1.41a1 1 0 0 1 0 1.42 1 1 0 0 1-.71.29z"></path></svg>
                 </button>
             </div>
 
@@ -55,22 +57,45 @@
             </div>
 
             <div class="details">
-                <div class="photo"></div>
+                <div class="photo-div"><img class="photo"></img></div>
                 <div class="text_details">
                     <div class="detail1">
                         <div class="name_joining">
                             <h3 class="name"></h3>
-                            <h3 class="join_date"></h3>
+                            <h5 class="join_date"></h5>
                         </div>
-                        <h3 class="username"></h3>
+                        <a href="" target="_blank" class="username"></a>
+
                         <div class="description"></div>
                     </div>
                     <div class="github_repos">
-                        <div class="Repos"></div>
-                        <div class="Followers"></div>
-                        <div class="Following"></div>
+                        <div class="repositories">
+                            <h4 class="headings">Repos</h4>
+                            <div class="Repos"></div>
+                        </div>
+                        <div class="followers_track">
+                            <h4 class="headings">Followers</h4>
+                            <div class="Followers"></div>
+                        </div>
+                        
+                        <div class="following_track">
+                            <h4 class="headings">Following</h4>
+                            <div class="Following"></div>
+                        </div>
                     </div>
-                    <div class="links"></div>
+                    <div class="links">
+                        <button class="github">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="link_image githubicon" viewBox="0 0 16 16" id="github"><path d="M7.999 0C3.582 0 0 3.596 0 8.032a8.031 8.031 0 0 0 5.472 7.621c.4.074.546-.174.546-.387 0-.191-.007-.696-.011-1.366-2.225.485-2.695-1.077-2.695-1.077-.363-.928-.888-1.175-.888-1.175-.727-.498.054-.488.054-.488.803.057 1.225.828 1.225.828.714 1.227 1.873.873 2.329.667.072-.519.279-.873.508-1.074-1.776-.203-3.644-.892-3.644-3.969 0-.877.312-1.594.824-2.156-.083-.203-.357-1.02.078-2.125 0 0 .672-.216 2.2.823a7.633 7.633 0 0 1 2.003-.27 7.65 7.65 0 0 1 2.003.271c1.527-1.039 2.198-.823 2.198-.823.436 1.106.162 1.922.08 2.125.513.562.822 1.279.822 2.156 0 3.085-1.87 3.764-3.652 3.963.287.248.543.738.543 1.487 0 1.074-.01 1.94-.01 2.203 0 .215.144.465.55.386A8.032 8.032 0 0 0 16 8.032C16 3.596 12.418 0 7.999 0z"></path></svg>
+                        </button>
+                        <button class="twitter">
+                            <img src="assets/twitter.png" alt="" class="link_image">
+                            <div class="twitter_username"></div>
+                        </button>
+                        <button class="location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" class="link_image" viewBox="0 0 100 100" id="locationicon"><path d="M79.535 27.4c-.32-1.201-.971-2.48-1.452-3.6C72.324 9.96 59.741 5 49.581 5 35.98 5 21 14.12 19 32.919v3.841c0 .16.055 1.6.134 2.32 1.121 8.959 8.19 18.48 13.47 27.439 5.68 9.599 11.574 19.041 17.415 28.479 3.6-6.159 7.188-12.399 10.707-18.399.959-1.761 2.071-3.521 3.031-5.201.64-1.119 1.862-2.238 2.421-3.279C71.857 57.722 81 47.24 81 36.92v-4.24c0-1.119-1.387-5.039-1.465-5.28M49.83 46.68c-3.998 0-8.374-1.999-10.534-7.52-.322-.879-.296-2.64-.296-2.801v-2.48c0-7.038 5.976-10.239 11.175-10.239 6.4 0 11.351 5.121 11.351 11.521S56.23 46.68 49.83 46.68"></path></svg>
+                            <div class="location_text"></div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

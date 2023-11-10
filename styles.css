@@ -10,10 +10,15 @@
 .wrapper{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(45deg,rgb(104, 80, 202), #ece8e9, #9575CD);
+    background-color: rgb(6, 19, 40);
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Space Mono', monospace;
+}
+
+.lightwrapper{
+    background: linear-gradient(45deg,rgb(104, 80, 202), #ece8e9, #9575CD);
 }
 
 
@@ -25,13 +30,13 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    font-family: 'Space Mono', monospace;
+    
 }
 
 .title{
     width:35rem;
     height: 5rem;
-    /* background-color: white;
-    box-shadow: 0px 0px 5px black; */
     border-radius: 1rem;
     display: flex;
     padding: 1rem;
@@ -39,12 +44,26 @@
     align-items: center;
 }
 
+.light_title{
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+}
+
 .details{
     width:35rem;
     height: 30rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    background-color: #1e2a47;
+    gap: 2rem;
+    box-shadow:0px 0px 10px rgb(87, 101, 123);
+}
+
+.details_light{
     background-color: white;
     box-shadow: 0px 0px 5px black;
-    border-radius: 1rem;
 }
 
 .khoji-img{
@@ -53,10 +72,14 @@
 
 .Khoji_text{
     font-size: 2.5rem;
-    color: rgb(50, 49, 8,0.8);
+    color: white;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    color: #395f9c;
+    /* color: #395f9c; */
+}
+
+.light_khoji_text{
+    color: rgb(50, 49, 8,0.8);
 }
 
 .title_name{
@@ -77,10 +100,170 @@
     cursor: pointer;
 }
 
-#search{
-    
+.darkmode{
+    fill: black;
+    display: none;
 }
 
 .lightmode{
-    display: none;
+    fill: white;
+}
+
+.photo{
+    width: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.twitter{
+    position: relative;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+}
+.github{
+    position: relative;
+    top: 1rem;
+    width:fit-content;
+    height: 4rem;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+.location{
+    position: relative;
+    top: 1rem;
+    width:fit-content;
+    height: 4rem;
+    background: none;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.location_text{
+    font-family: 'Space Mono', monospace;
+    color: white;
+}
+.link_image{
+    width: 2rem;
+    height: 2rem;
+}
+
+.text_details{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.detail1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.name_joining{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.github_repos{
+    width: 21rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgb(6, 19, 40);
+    border-radius: 1rem;
+    color: white;
+    font-family: 'Space Mono', monospace;
+}
+
+.links{
+    width: fit-content;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.repositories{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.followers_track{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.following_track{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.join_date{
+    font-size: 13px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Space Mono', monospace;
+}
+
+.description{
+    font-family: 'Space Mono', monospace;
+    color: white;
+}
+
+.username{
+    font-family: 'Space Mono', monospace;
+    color: blue;
+}
+
+.name{
+    font-family: 'Space Mono', monospace;
+    color: white;
+    font-weight: 900;
+}
+
+.headings{
+    font-family: 'Space Mono', monospace;
+}
+
+.githubicon{
+    position: relative;
+    bottom: 0.5rem;
+    fill: white;
+}
+
+#locationicon{
+    fill: white;
+}
+
+.twitter_username{
+    font-family: 'Space Mono', monospace;
+    color: white;
 }
