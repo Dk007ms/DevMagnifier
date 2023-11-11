@@ -8,6 +8,7 @@
 
 
 .wrapper{
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-color: rgb(6, 19, 40);
@@ -23,6 +24,7 @@
 
 
 .container{
+    position: relative;
     width:40rem;
     height: 40rem;
     display: flex;
@@ -35,6 +37,8 @@
 }
 
 .title{
+    position: relative;
+   
     width:35rem;
     height: 5rem;
     border-radius: 1rem;
@@ -44,21 +48,48 @@
     align-items: center;
 }
 
+.search_bar{
+    position: relative;
+    
+}
+
 .light_title{
     background-color: white;
     box-shadow: 0px 0px 5px black;
 }
 
 .details{
+    position: relative;
     width:35rem;
     height: 30rem;
     padding: 1rem;
     padding-top: 2rem;
     border-radius: 1rem;
-    display: flex;
+    display: none;
     background-color: #1e2a47;
     gap: 2rem;
     box-shadow:0px 0px 10px rgb(87, 101, 123);
+}
+
+.error_msg{
+    position: relative;
+    width:35rem;
+    height: 5rem;
+    font-family: 'Space Mono', monospace;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size:xx-large;
+    border-radius: 1rem;
+    background-color: #1e2a47;
+    box-shadow:0px 0px 10px rgb(87, 101, 123);
+    color: white;
+}
+
+.error_in_light{
+    background-color: white;
+    color:rgb(6, 19, 40) ;
+    box-shadow: 0px 0px 5px black;
 }
 
 .details_light{
@@ -264,6 +295,7 @@
 }
 
 .twitter_username{
+    width: max-content;
     font-family: 'Space Mono', monospace;
     color: white;
 }

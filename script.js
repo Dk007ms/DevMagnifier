@@ -27,32 +27,59 @@ const light_btn =document.querySelector(".light_btn");
 const Khoji_text =document.querySelector(".Khoji_text");
 const githubicon =document.querySelector(".githubicon");
 const locationicon =document.querySelector("#locationicon");
+const search_icon_btn =document.querySelector(".search_icon_btn");
+const error_msg =document.querySelector(".error_msg");
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+var githubpage;
+var twitterid;
+var newuser;
 
+const options = {
+	method: 'GET',
+	headers: {
+		'Authorization': '[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]'
+	}
+};
 
-async function find_user(){
-   const user=await fetch(`https://api.github.com/users/Dk007ms`);
-   let newuser=await user.json();
-   console.log(newuser);
-   nameuser.textContent=newuser.name;
-   photo.src=`${newuser.avatar_url}`;
-   let d=new Date(newuser.created_at);
-   let month=months[d.getMonth()];
-   let Year=d.getFullYear();
-   let  date=d.getDate();
-   let fulldate=`${date} ${month} ${Year}`;
-   join_date.innerHTML=`Joined ${fulldate}`;
-   username.innerHTML=`@${newuser.login}`;
-   username.href=`${newuser.html_url}`;
-   description.innerHTML=newuser.bio;
-   Repos.innerHTML=newuser.public_repos;
-   Followers.innerHTML=newuser.followers;
-   Following.innerHTML=newuser.following;
-   location_text.innerText=newuser.location;
-   twitter_username.innerText=newuser.twitter_username;
-}
+async function find_user(search){
+   try{
+      const user=await fetch(`https://api.github.com/users/${search}`, options);
+      newuser=await user.json();
+      console.log(newuser);
+      if(newuser.message==="Not Found"){
+         throw "404 not found";
+      }
+      nameuser.textContent=newuser.name;
+      photo.src=`${newuser.avatar_url}`;
+      let d=new Date(newuser.created_at);
+      let month=months[d.getMonth()];
+      let Year=d.getFullYear();
+      let  date=d.getDate();
+      let fulldate=`${date} ${month} ${Year}`;
+      join_date.innerHTML=`Joined ${fulldate}`;
+      username.innerHTML=`@${newuser.login}`;
+      username.href=`${newuser.html_url}`;
+      description.innerHTML=newuser.bio;
+      Repos.innerHTML=newuser.public_repos;
+      Followers.innerHTML=newuser.followers;
+      Following.innerHTML=newuser.following;
+      location_text.innerText=newuser.location;
+      twitter_username.innerText=newuser.twitter_username;
+      twitterid=newuser.twitter_username;
+      githubpage=newuser.html_url;
+      if(newuser.twitter_username===null){
+         twitter_username.innerText=`Not found`;
+         twitterid=null;
+      }
+      details.style.display="flex";
+      error_msg.style.display="none";
+   }
+   catch(error){
+     details.style.display="none";
+     error_msg.style.display="flex";
+   }
+};
 
-find_user();
 
 light_btn.addEventListener("click",()=>{
    wrapper.classList.add("lightwrapper");
@@ -70,6 +97,7 @@ light_btn.addEventListener("click",()=>{
    twitter_username.style.color="rgb(6, 19, 40)";
    github_repos.style.background="white";
    github_repos.style.color="rgb(6, 19, 40)";
+   error_msg.classList.add("error_in_light");
 });
 
 dark_btn.addEventListener("click",()=>{
@@ -88,4 +116,32 @@ dark_btn.addEventListener("click",()=>{
    twitter_username.style.color="white";
    github_repos.style.background="rgb(6, 19, 40)";
    github_repos.style.color="white";
+   error_msg.classList.remove("error_in_light");
+});
+
+
+search_icon_btn.addEventListener("click",(e)=>{
+   let searchvalue=inputdata.value;
+   find_user(searchvalue);
+   inputdata.value="";
+});
+
+inputdata.addEventListener("keypress",function(event){
+   if(event.key === "Enter"){
+      event.preventDefault();
+      let searchvalue=inputdata.value;
+      find_user(searchvalue);
+      inputdata.value="";
+   }
+});
+
+github.addEventListener("click",()=>{
+   window.open(githubpage, 'blank');
+});
+
+twitter.addEventListener("click",()=>{
+   if(twitterid===null){
+      return;
+   }
+   window.open(`https://twitter.com/${twitterid}`);
 });
