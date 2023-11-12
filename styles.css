@@ -399,6 +399,9 @@
     width: 2.3rem;
    }
 
+   .error_msg{
+    width: 18rem;
+   }
 }
 
 @media screen and (max-width: 376px) {
