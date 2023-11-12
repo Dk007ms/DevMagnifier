@@ -3,7 +3,6 @@
     margin:0px;
     font-family: sans-serif;
 }
-
 .search_bar{
     width: 500px;
     border-radius: 100px;
@@ -48,6 +47,7 @@ input{
 .slider_box{
     width: 12rem;
     position: relative;
+    bottom: 0.242rem;
 }
 .slider{
     position: absolute;
@@ -58,3 +58,41 @@ input{
     width: 12rem;
 }
 
+
+@media screen and (max-width: 426px) {
+    
+    .search_bar{
+     width: 17rem;
+     height: 3.4rem;
+     align-items: center;
+    }
+    .slider{
+        font-size:0.9rem;
+    }
+
+    .placeholder{
+        width: 12rem;
+        display: flex;
+       align-items: center;
+    }
+
+    .slider_box{
+       width: max-content;
+       position: relative;
+       top: 0.04rem;
+    }
+
+    input::placeholder{
+        font-size: 1rem;
+    }
+
+    .input{
+        position: relative;
+        right:0.5rem;
+    }
+     
+    .box{
+        width: max-content;
+        font-size: 1.1rem;
+    }
+ }

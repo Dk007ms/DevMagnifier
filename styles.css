@@ -16,6 +16,8 @@
     justify-content: center;
     align-items: center;
     font-family: 'Space Mono', monospace;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .lightwrapper{
@@ -38,7 +40,6 @@
 
 .title{
     position: relative;
-   
     width:35rem;
     height: 5rem;
     border-radius: 1rem;
@@ -298,4 +299,198 @@
     width: max-content;
     font-family: 'Space Mono', monospace;
     color: white;
+}
+
+
+
+@media screen and (max-width: 768px) {
+   .container{
+    height: 30rem;
+    width: 30rem;
+   }
+
+   .details{
+    height: 25rem;
+    gap: 1rem;
+   }
+
+   .text_details{
+    height: 22rem;
+    gap: 1.1rem;
+   }
+
+   .detail1{
+    height: 10rem;
+    font-size: 0.855rem;
+   }
+   .github_repos{
+     height:5rem;
+     width: 18rem;
+     font-size: 0.85rem;
+   }
+
+   .links{
+    height: 5rem;
+    gap: 5rem;
+   }
+   
+   .photo{
+    height: auto;
+   }
+
+}
+@media screen and (max-width: 426px) {
+   .container{
+    position: relative;
+    top: 7rem;
+    height: 50rem;
+    width: 23rem;
+   }
+
+   .username{
+    text-align: center;
+    }
+
+   .details{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 23rem;
+    height: 36rem;
+   }
+
+   .text_details{
+    height: 23rem;
+    gap: 1.2rem;
+   }
+
+   .detail1{
+    height: 10rem;
+    font-size: 0.855rem;
+   }
+   .github_repos{
+     position: relative;
+     left: 1.5rem;
+     height:5rem;
+     width: 18rem;
+     font-size: 0.85rem;
+   }
+
+   .links{
+    position: relative;
+    left: 1.8rem;
+    height: 4rem;
+    gap: 5rem;
+   }
+   
+   .photo{
+    height: auto;
+   }
+
+   .title{
+     width: 18rem;
+     gap: 0rem;
+   }
+   .Khoji_text{
+    width:max-content;
+    font-size:1.2rem;
+   }
+
+   .khoji-img{
+    width: 2.3rem;
+   }
+
+}
+
+@media screen and (max-width: 376px) {
+   
+    .container{
+    position: relative;
+    top: 8rem;
+    height: 55rem;
+    width: 20rem;
+    }
+
+    .details{
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    justify-content: center;
+    width: 18rem;
+    height: 40rem;
+    }
+
+    .name_joining{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    }
+
+    .description{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    }
+    
+    .username{
+    text-align: center;
+    }
+    .name{
+    font-size: 1.3rem;
+    }
+    .join_date{
+    font-size: 0.7rem;
+    }
+
+    .text_details{
+    height: 30rem;
+    }
+
+    .detail1{
+    height: 14rem;
+    font-size: 0.855rem;
+    }
+    .github_repos{
+        position: relative;
+        left: 0rem;
+        height:5rem;
+        width: 17rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+
+    .twitter_username{
+    font-size: 0.7rem;
+    }
+
+    .location_text{
+    font-size: 0.7rem
+    }
+
+    .links{
+    position: relative;
+    display: flex;
+    left: 0.7rem;
+    height: 5rem;
+    width: 16rem;
+    gap: 0.1rem;
+    }
+    
+    .photo{
+    height: auto;
+    }
+
+    .title{
+        width: 18rem;
+        gap: 0rem;
+    }
+    .Khoji_text{
+    width:max-content;
+    font-size:1.2rem;
+    }
+
+    .khoji-img{
+        width: 2.3rem;
+    }
+
 }
