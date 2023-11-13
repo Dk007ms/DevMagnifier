@@ -79,7 +79,6 @@ input{
     .slider_box{
        width: max-content;
        position: relative;
-       top: 0.4rem;
     }
 
     input::placeholder{
